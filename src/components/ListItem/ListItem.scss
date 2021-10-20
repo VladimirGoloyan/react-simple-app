@@ -1,6 +1,6 @@
-.app-user{
+.app-list-item{
     width: 80%;
-    height: 5%;
+    height: 8%;
     min-height: 25px;
     background-color: chocolate;
     border-radius: 20px;
@@ -8,4 +8,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    
+    span{
+        min-width: 10%;
+    }
+
+    &__delete-button{
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+    }
 }
