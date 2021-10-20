@@ -1,0 +1,24 @@
+@import "./_reset";
+
+$primary-color: navy;
+$secondary-color: coral;
+$accent-color: cornflowerblue;
+
+html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+  height: 100%;
+  
+  #root{
+    height: 100%;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+

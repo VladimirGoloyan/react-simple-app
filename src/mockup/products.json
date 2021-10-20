@@ -1,0 +1,42 @@
+[
+    {
+      "id": 201,
+      "name": "Nulla",
+      "price": 207,
+      "categoryId": 1,
+      "rate": 2.44,
+      "review": 78
+    },
+    {
+      "id": 202,
+      "name": "Corporis",
+      "price": 271,
+      "categoryId": 1,
+      "rate": 2.18,
+      "review": 67
+    },
+    {
+      "id": 203,
+      "name": "Minus",
+      "price": 295,
+      "categoryId": 1,
+      "rate": 0.91,
+      "review": 116
+    },
+    {
+      "id": 204,
+      "name": "Qui",
+      "price": 280,
+      "categoryId": 1,
+      "rate": 3.11,
+      "review": 78
+    },
+    {
+      "id": 209,
+      "name": "Similique",
+      "price": 262,
+      "categoryId": 1,
+      "rate": 0.29,
+      "review": 44
+    }
+]

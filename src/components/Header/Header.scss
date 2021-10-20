@@ -1,0 +1,33 @@
+@import '../../styles/index';
+
+.app-header {
+  padding: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+
+    &__item {
+      padding: 8px;
+      font-size: 20px;
+      margin: 8px;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+
+      
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../styles/index';
+
+.app-nav-link{
+    color: $accent-color;
+    text-decoration: none;
+}
+.app-nav-link--active{
+    color: $secondary-color;
+}
+
