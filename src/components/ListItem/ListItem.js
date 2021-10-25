@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ListItem.scss";
 
-const ListItem = ({ element, heading, deleter }) => {
+const ListItem = ({ element, heading, deleter, editor }) => {
   return (
     <div className="app-list-item">
       {Object.keys(element).map((elem, idx) => {
@@ -15,9 +15,14 @@ const ListItem = ({ element, heading, deleter }) => {
         );
       })}
       {!heading && (
-        <button className="app-list-item__delete-button" onClick={deleter}>
-          X
-        </button>
+        <>
+          <button className="app-list-item__update-button" onClick={editor}>
+            /
+          </button>
+          <button className="app-list-item__delete-button" onClick={deleter}>
+            X
+          </button>
+        </>
       )}
     </div>
   );

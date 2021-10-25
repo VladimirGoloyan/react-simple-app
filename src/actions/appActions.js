@@ -17,3 +17,21 @@ export const deleteUser = (id) => (dispatch) => {
     },
   });
 };
+
+export const addUser = (object) => (dispatch) => {
+  dispatch({
+    type: actionTypes.ADD_USER,
+    payload: {
+      object,
+    },
+  });
+};
+
+export const editUser = (object) => (dispatch) => {
+  dispatch({
+    type: actionTypes.EDIT_USER,
+    payload: {
+      object,
+    },
+  });
+};
