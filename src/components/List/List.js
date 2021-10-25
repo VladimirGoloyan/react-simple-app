@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setUsers } from "../../actions/appActions";
+import { setUsers, deleteUser } from "../../actions/appActions";
 
 import ListItem from "../ListItem/ListItem";
 
@@ -16,8 +16,8 @@ class List extends Component {
 
   componentDidMount() {
     this.setState({ list: this.props.list });
-    this.props.setUsers(this.props.list)
-    console.log(this.props)
+    this.props.setUsers(this.props.list);
+    console.log(this.props);
   }
 
   listItemDeleter = (id) => {
@@ -28,7 +28,7 @@ class List extends Component {
   render() {
     return (
       <div className="app-list">
-        {this.props.users.length > 0? (
+        {this.props.users.length > 0 ? (
           <div className="app-list__container">
             <ListItem element={this.state.list[0]} heading={true} />
             {this.props.users.map((el, idx) => {
@@ -37,7 +37,7 @@ class List extends Component {
                   element={el}
                   key={idx}
                   heading={false}
-                  deleter={() => this.listItemDeleter(el.id)}
+                  deleter={() => this.props.deleteUser(el.id)}
                   className="app-list__container__item"
                 />
               );
@@ -57,4 +57,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps,{setUsers})(List)
+const mapDispatchToProps = {
+  setUsers,
+  deleteUser
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
