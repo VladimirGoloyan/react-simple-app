@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./NavLink.scss";
+import "../styles/NavLink.scss";
 
 import { NavLink as RouterNavLink } from "react-router-dom";
 const NavLink = ({ children, to }) => {

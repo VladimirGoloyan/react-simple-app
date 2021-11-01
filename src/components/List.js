@@ -5,11 +5,11 @@ import {
   deleteUser,
   addUser,
   editUser,
-} from "../../actions/appActions";
+} from "../actions/appActions";
 
-import ListItem from "../ListItem/ListItem";
+import ListItem from "./ListItem";
 
-import "./List.scss";
+import "../styles/List.scss";
 
 class List extends Component {
   sample = this.props.list[0];

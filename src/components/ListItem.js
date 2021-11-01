@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ListItem.scss";
+import "../styles/ListItem.scss";
 
 const ListItem = ({ element, heading, deleter, editor }) => {
   return (

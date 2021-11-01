@@ -1,7 +1,7 @@
 import React from "react";
 
-import NavLink from "../NavLink/NavLink";
-import "./Header.scss";
+import NavLink from "./NavLink";
+import "../styles/Header.scss";
 
 const routerLinks = [
   {
