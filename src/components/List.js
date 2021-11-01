@@ -15,13 +15,13 @@ class List extends Component {
   sample = this.props.list[0];
 
   componentDidMount() {
-    this.props.setUsers(this.props.list);
-    console.log(this.props);
+    if(this.props[this.props.name].length === 0){
+      this.props.setUsers(this.props.list,this.props.name);
+    }
   }
 
   inputValueCombiner = () => {
     let temp = {};
-
     Object.keys(this.sample).map((el) => {
       if (el !== "id") {
         temp = { ...temp, [el]: document.getElementsByName(el)[0].value };
@@ -41,17 +41,17 @@ class List extends Component {
     } else {
       obj = { id: 0, ...obj };
     }
-    this.props.addUser(obj);
+    this.props.addUser(obj,this.props.name);
   };
 
   itemEditor = (id) => {
     let obj = this.inputValueCombiner();
     obj = { id, ...obj };
-    this.props.editUser(obj);
+    this.props.editUser(obj,this.props.name);
   };
 
   itemDeleter = (id) => {
-    this.props.deleteUser(id);
+    this.props.deleteUser(id,this.props.name);
   };
 
   render() {
@@ -67,10 +67,10 @@ class List extends Component {
           })}
           <button onClick={() => this.itemAdder()}>Add</button>
         </div>
-        {this.props.users.length > 0 ? (
+        {this.props[this.props.name].length > 0 ? (
           <div className="app-list__container">
             <ListItem element={this.props.users[0]} heading={true} />
-            {this.props.users.map((el, idx) => {
+            {this.props[this.props.name].map((el, idx) => {
               return (
                 <ListItem
                   element={el}
@@ -94,6 +94,8 @@ class List extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
+    products: state.products,
+    categories: state.categories
   };
 };
 

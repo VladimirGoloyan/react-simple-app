@@ -11,9 +11,9 @@ import categoryList from '../mockup/categories.json'
 const AppRoutes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={() => <List list={usersList}/>} />
-      <Route exact path="/products" component={() => <List list={productsList}/>}/>
-      <Route exact path="/categories" component={() => <List list={categoryList}/>}/>
+      <Route exact path="/" component={() => <List list={usersList} name={'users'}/>} />
+      <Route exact path="/products" component={() => <List list={productsList} name={'products'}/>}/>
+      <Route exact path="/categories" component={() => <List list={categoryList} name={'categories'}/>}/>
     </Switch>
   );
 };
